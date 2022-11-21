@@ -11,10 +11,10 @@ chrome.storage.local.get(null, function(items){
     if(items.rtcIPHandling == undefined){
       try{
         chrome.storage.local.set({
-          rtcIPHandling: 'default_public_interface_only'
+          rtcIPHandling: 'disable_non_proxied_udp' // THIS LINE HAS BEEN EDITED AND IS NOT IN ITS ORIGINAL FORMAT
         }, function(){
           chrome.privacy.network.webRTCIPHandlingPolicy.set({
-            value: 'default_public_interface_only'
+            value: 'disable_non_proxied_udp' // THIS LINE HAS BEEN EDITED AND IS NOT IN ITS ORIGINAL FORMAT
           });
         })
       }
